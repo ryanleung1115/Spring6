@@ -3,4 +3,19 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="dept" class="com.atguigu.spring6.iocxml.ditest.Dept">
+        <property name="dname" value="Technical"></property>
+    </bean>
+<bean id="emp" class="com.atguigu.spring6.iocxml.ditest.Emp">
+    <property name="ename" value="jason"></property>
+    <property name="age" value="20"></property>
+    <property name="dept" ref="dept"></property>
+    <property name="hobbies">
+        <array>
+            <value>eating</value>
+            <value>sleeping</value>
+            <value>coding</value>
+        </array>
+    </property>
+</bean>
 </beans>
